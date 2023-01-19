@@ -27,6 +27,13 @@ if [[ -d /lfs4 ]] ; then
     fi
     target=jet
     module purge
+elif [[ -d /lustre/work ]] ; then
+    # Axiom Azure
+    if ( ! eval module help > /dev/null 2>&1 ) ; then
+	source /lustre/work/soft/lmod/lmod/init/bash
+    fi
+    target=axiom
+    module purge
 elif [[ -d /scratch1/NCEPDEV ]] ; then
     # We are on NOAA Hera
     if ( ! eval module help > /dev/null 2>&1 ) ; then
