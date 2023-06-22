@@ -27,10 +27,10 @@ if [[ -d /lfs4 ]] ; then
     fi
     target=jet
     module purge
-elif [[ -d /lustre/work ]] ; then
+elif [[ "$PLATFORM" == axiom ]] ; then
     # Axiom Azure
     if ( ! eval module help > /dev/null 2>&1 ) ; then
-	source /lustre/work/soft/lmod/lmod/init/bash
+	source /etc/profile.d/init-lmod.sh
     fi
     target=axiom
     module purge
