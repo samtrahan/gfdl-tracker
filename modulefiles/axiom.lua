@@ -2,9 +2,7 @@ help([[
 loads hafs_tracker modulefile and related set environment variables
 ]])
 
-prepend_path("MODULEPATH", "/lustre/save/spack-stack/envs/ubuntu20-intel2022.2-override-openmpi-v2/install/modulefiles/Core")
-prepend_path("MODULEPATH", "/lustre/save/spack-stack/envs/ubuntu20-intel2022.2-override-openmpi-v2/install/modulefiles/")
-
+load("spack-stack")
 load("stack-intel/2021.6.0")
 load("stack-openmpi/4.1.5")
 
